@@ -1,0 +1,114 @@
+/*АДАПТИВНАЯ ВЕРСТКА*/
+/*ихменения содержимым страницы только в формате экрана 1230px(ширина нашего контента)*/
+@media (max-width: 1230px) {
+    /*NAV-LIST*/
+    .nav-list{
+        display: none;/*скрываем список меню при 1230px*/
+    }
+    .nav-button{
+        display: block;/*а кнопка наоборот покажется*/
+    }
+    /*если у nav есть класс open, тогда nav-list  должен отображаться*/
+    .nav.open .nav-list{
+        position:fixed;/*будет иметь зафиксированную позицию*/
+
+        /*растянем блок, что бы в нем умещались кнопки меню в колонку */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        z-index: 1;/*уровень элемента в стеке*/
+        background-color: #fff;
+
+        padding: 46px 30px;
+        display: flex;
+        flex-direction: column;/*выстроит контент в колонку*/
+        row-gap: 40px;/*отступы между рядами*/
+        font-size: 34px;
+        font-weight: 600;
+    }
+
+    .nav-link{
+        color: #828282;
+    }
+    .nav-link.active{
+        color: black;
+    }
+
+    .nav-button{
+        position: absolute;
+        z-index: 9;
+        top: 46px;
+        right: 30px;
+    }
+    .nav.open .nav-button{
+        position: fixed;
+    }
+    
+    .header-nav{
+    margin-bottom: 50px;
+    }
+
+    /*КОНТЕНТ ШАПКИ*/
+    .header-row{
+        flex-direction: column;/*установка основной оси*/
+        row-gap: 20px;
+    }
+    .header-content{
+        margin-top: 0;/*убираем ненужный отступ*/
+    }
+    .header-img{
+        text-align: center;/*центрирование*/
+    }
+
+}
+
+/*медиа запрос для экранов мение 700px*/
+@media (max-width: 700px){
+    .header-heading{
+        font-size: 34px;
+        line-height: 1.3;/*межстрочный интервал*/
+    }
+
+    .header-heading span{
+        font-size: 28px;
+    }
+
+    .services {
+        padding: 60px 0px;
+    }
+
+    .portfolio {
+        padding: 60px 0px;
+    }
+
+    .portfolio-title{
+        margin-bottom: 50px;
+    }
+
+    .project-img{
+        margin-bottom: 30px;
+    }
+
+    .project + .project {
+        margin-top: 55x;
+    }
+
+    .contacts{
+        padding: 60px 0;
+    }
+    .contacts-title{
+        margin-bottom: 20px;
+    }
+    .contacts-content{
+        margin-bottom: 20px;
+    }
+    .contacts-button{
+        margin-bottom: 70px;
+    }
+    .contacts-social{
+        margin-bottom: 20px;
+        column-gap: 50px;
+    }
+}

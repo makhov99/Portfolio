@@ -1,0 +1,201 @@
+// Файл бобнуляющего стиля
+@import "nullstyle.scss";
+//подключенные шрифты
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 14px;//базовый раземер шрифта на странице
+}
+
+.container{
+    //начальная ширина контейнера 1170px 
+    max-width: 1230px;//конечная ширина контейнера 
+    padding: 0 30px;//поля отступа. Нужны, что бы контент не прилипал к краям экрана на мобильной версии
+    margin: 0 auto;//выравнивание блока по центру
+}
+.title-1 {
+    font-size: 34px;
+    font-weight: 600;
+}
+.btn {
+    background-color: #070707;
+    display: inline-block;//блочно-строчный 
+    padding: 7px 22px;
+    border-radius: 30px;
+    
+    color: #ffffff;
+    font-size: 18px;
+
+    transition: background-color 0.2s ease-in, top 0.2s ease-in;//плавное изменение в две секунды
+}
+.btn:hover, .btn:focus{
+    background-color: #444444;
+}
+.btn:active{
+    position: relative;
+    top: 1px;//смещение на один пиксель
+    background-color: #000000;
+}
+
+
+//header
+.header{
+    padding: 46px 0 0 0 ;
+    background-color: #F1F1F1;
+}
+
+.header-nav {
+    display: flex;//по умолчанию выставляет элементы в ряд
+    justify-content: space-between;//раскидывыет элементы задавая пространтсво между ними 
+    align-items: flex-end;//вертикальное выравнивание по нижней линии
+    margin-bottom: 76px;
+}
+.logo {
+    position: relative;//родительский элемент
+    padding: 0 12px 3px 0;//оступы для желтой точки логотипа 
+    font-weight: 700;
+    font-size: 32px;
+    color: black;
+}
+//создаем желтую точку с помощью псевдоэлемента
+.logo::after{
+    content:"";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #FDA300;
+    border-radius: 50%;
+    position: absolute;//обсолютное позиционирование относительно родительского элемента 
+    right: 0;//правый, нижний угол  
+    bottom: 0;
+}
+
+
+//nav
+.nav-list {
+    display: flex;
+    column-gap: 50px;//оступы между колонками 
+    font-weight: 500;
+    font-size: 14px;
+}
+.nav-button{
+    display: none;//скрытие кнопки меню бургер 
+}
+
+.nav-link {
+    color: #000;
+}
+
+.nav-link.active{
+    color: #606060;
+}
+
+//header content
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;//задаем отступ между фотографией и текстом для (моб.разм) 
+
+}
+.header-content {
+    max-width: 500px;//ширина текста 
+    margin-top: 124px;
+}
+.header-heading {
+    font-weight: 600;
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+.header-content p{
+    line-height: 2;//межстрочный интервал 
+}
+
+
+//services
+.services {
+    padding: 90px 0;
+}
+.service-row {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 60px;//расстояние между рядами
+    flex-wrap: wrap;//возможность карточек переноситься на следующие ряды
+}
+.service-card{
+    flex: 1 1 0;//сжатие пространство между карточками бует равно еденице. Занимая ограниченое пространство
+    min-width: 315px;
+}
+.service-card-img {
+    margin-bottom: 30px;
+}
+.service-card-title {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.service-card p{
+    line-height: 2;
+}
+
+
+//portfolio
+.portfolio {
+    padding: 90px 0;
+    background-color: #f1f1f1;
+}
+.portfolio-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+.project {
+    text-align: center;
+}
+
+//отступ между проектами (мы выбрали тег с классом проджект, а затем с помощью плюс выбираем сосдний проджект) 
+.project + .project{
+    margin-top: 90px;
+}
+.project-img {
+    margin-bottom: 40px;
+}
+.project-title {
+    font-size: 18px;
+}
+.project-title a{
+    color: #000;
+    text-decoration: underline;//подчеркивание текста 
+}
+
+
+
+//footer
+.contacts {
+    padding: 90px 0 ;
+    text-align: center;
+}
+.contacts-title {
+    margin-bottom: 40px;
+}
+.contacts-content {
+    margin: 0 auto 40px;
+    max-width: 480px;
+    font-size: 18px;
+}
+.contacts-button {
+    margin-bottom: 80px;
+
+}
+.contacts-social {
+    display: flex;
+    justify-content: center;//по центру
+    align-items: center;//центрирование по вертикали(если у них разная высота)  
+    column-gap: 60px;
+    margin-bottom: 40px;
+}
+.contacts-footer {
+    font-size: 14px;
+    color: #828282;
+}

@@ -1,0 +1,138 @@
+<!--Сообщаем браузеру как стоит обрабатывать эту страницу-->
+<!DOCTYPE html>
+<!--Оболочка документа,указываем язык содержимого-->
+<html lang="en"> 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-wigth"><!--адаптивная верстка-->
+    <!--Кодировка страницы-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Заголовок страницы в браузере-->
+    <title>Portfolio</title>
+    <!--подключение шрифта-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!--подключение файла стилей-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--подключение файлов стилей для мобильной версии-->
+    <link rel="stylesheet" href="css/mobail.css">
+    <!--анимация (cdnJs)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!--шапка страницы-->
+    <header class="header">
+      <!--контейнер для определения шерины страницы-->
+      <div class="container">
+        <!--блок навигации-->
+        <div class="header-nav">
+          <a href="#" class="logo">Kelvin</a>
+          <nav id="nav" class="nav">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Works</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <!--кнопка бургер-->
+            <button id="nav-btn" class="nav-button">
+              <img id="nav-btn-img" src="./img/icon/nav-open.svg" alt="">
+            </button>
+          </nav>
+        </div>
+        <!--header content-->
+        <div class="header-row">
+          <div class="header-content" data-aos="fade-up">
+            <h1 class="header-heading">Kelvin Kramer<br> <span>Designer & Developer</span></h1>
+            <p>I’m a portrait, fashion and lifestyle photographer living In New York City. During my thirteen year tenure here.</p>
+          </div>
+          <div class="header-img" data-aos="fade-left">
+            <picture>
+              <source media="(max-width: 799px)" srcset="./img/about/heromobail.png">
+              <img src="./img/about/hero.png" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--секция с услугами-->
+    <section class="services">
+      <div class="container">
+        <div class="service-row">
+          <div class="service-card" data-aos="fade-down">
+            <img class="service-card-img" src="./img/icon/graphic 1.svg" alt="">
+            <h3 class="service-card-title">UI/UX Design</h3>
+            <p>Our design is translated into comprehensive digital environments built on latest development standards.</p>
+          </div>
+          <div class="service-card" data-aos="fade-down">
+            <img class="service-card-img" src="./img/icon/startup 2.svg" alt="">
+            <h3 class="service-card-title">DEVELOPMENT</h3>
+            <p>Our design is translated into comprehensive digital environments built on latest development standards.</p>
+          </div>
+          <div class="service-card" data-aos="fade-down">
+            <img class="service-card-img" src="./img/icon/browser 3.svg" alt="">
+            <h3 class="service-card-title">SOFTWARE TESTING</h3>
+            <p>Our design is translated into comprehensive digital environments built on latest development standards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--портфолио-->
+    <section class="portfolio">
+      <div class="container">
+
+        <div class="portfolio-title">
+          <h2 class="title-1">Portfolio</h2>
+        </div>
+
+        <div class="project"  data-aos="flip-up">
+          <img src="./img/about/01.jpg" alt="" class="project-img">
+          <h3 class="project-title"><a href="#">Online fashion store - Homepage</a></h3>
+        </div>
+
+        <div class="project"  data-aos="flip-up">
+          <img src="./img/about/02.jpg" alt="" class="project-img">
+          <h3 class="project-title"><a href="#">Reebok Store - Concept</a></h3>
+        </div>
+
+        <div class="project"  data-aos="flip-up">
+          <img src="./img/about/03.jpg" alt="" class="project-img">
+          <h3 class="project-title"><a href="#">Braun Landing Page - Concept</a></h3>
+        </div>
+
+      </div>
+    </section>
+
+    <!--подвал-->
+    <footer class="contacts">
+      <div class="container">
+        <div class="contacts-title">
+          <h2 class="title-1">Contacts</h2>
+        </div>
+        <div class="contacts-content" data-aos="fade-down"><p>Want to know more or jast chat? <br>You are welcome!</p></div>
+        <div class="contacts-button" data-aos="fade-down">
+          <a href="#" class="btn">Send message</a>
+        </div>
+        <div class="contacts-social" data-aos="zoom-in">
+          <a href="#"><img src="./img/icon footer/LinkedIn.svg" alt=""></a>
+          <a href="#"><img src="./img/icon footer/Instargam.svg" alt=""></a>
+          <a href="#"><img src="./img/icon footer/Behance.svg" alt=""></a>
+          <a href="#"><img src="./img/icon footer/Dribble.svg" alt=""></a>
+        </div>
+        <div class="contacts-footer" data-aos="fade-up">
+          <p>Like me on <br> LinkedIn, Instagram, Behance, Dribble</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/skript.js"></script>
+  </body>
+</html> 
+
+    
